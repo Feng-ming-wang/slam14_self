@@ -5,6 +5,7 @@ set(CMAKE_BUILD_TYPE "Release")
 add_definitions("-DENABLE_SSE")
 set(CMAKE_CXX_FLAGS "-std=c++14 ${SSE_FLAGS} -g -O3 -march=native")
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/../bin)
+set(Sophus_LIBRARIES libSophus.so)
 
 find_package(OpenCV REQUIRED)
 find_package(Sophus REQUIRED)
@@ -21,5 +22,5 @@ include_directories(
 add_executable(optical_flow src/optical_flow.cpp)
 target_link_libraries(optical_flow ${OpenCV_LIBS})
 
-# add_executable(direct_method src/direct_method.cpp)
-# target_link_libraries(direct_method ${OpenCV_LIBS} ${Pangolin_LIBRARIES})
+add_executable(direct_method src/direct_method.cpp)
+target_link_libraries(direct_method ${OpenCV_LIBS} ${Pangolin_LIBRARIES} ${Sophus_LIBRARIES})

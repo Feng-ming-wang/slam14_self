@@ -63,5 +63,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/direct_method.dir/DependInfo.cmake"
   "CMakeFiles/optical_flow.dir/DependInfo.cmake"
   )

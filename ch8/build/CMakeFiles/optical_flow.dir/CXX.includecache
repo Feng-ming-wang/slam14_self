@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/fmw/gitClone/mySelf/slam14/ch8/src/optical_flow.cpp
+/home/fmw/gitClone/mySelf/slam14_self/ch8/src/optical_flow.cpp
 opencv2/opencv.hpp
 -
 string

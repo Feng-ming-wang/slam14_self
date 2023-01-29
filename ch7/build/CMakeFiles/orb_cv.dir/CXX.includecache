@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/fmw/gitClone/mySelf/slam14/ch7/src/orb_cv.cpp
+/home/fmw/gitClone/mySelf/slam14_self/ch7/src/orb_cv.cpp
 iostream
 -
 opencv2/core/core.hpp
@@ -16,7 +16,7 @@ opencv2/highgui/highgui.hpp
 opencv2/features2d/features2d.hpp
 -
 opencv2/imgcodecs/legacy/constants_c.h
-/home/fmw/gitClone/mySelf/slam14/ch7/src/opencv2/imgcodecs/legacy/constants_c.h
+/home/fmw/gitClone/mySelf/slam14_self/ch7/src/opencv2/imgcodecs/legacy/constants_c.h
 chrono
 -
 

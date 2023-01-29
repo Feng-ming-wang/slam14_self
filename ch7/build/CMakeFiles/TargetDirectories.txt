@@ -1,3 +1,6 @@
-/home/fmw/gitClone/mySelf/slam14/ch7/build/CMakeFiles/rebuild_cache.dir
-/home/fmw/gitClone/mySelf/slam14/ch7/build/CMakeFiles/edit_cache.dir
-/home/fmw/gitClone/mySelf/slam14/ch7/build/CMakeFiles/orb_cv.dir
+/home/fmw/gitClone/mySelf/slam14_self/ch7/build/CMakeFiles/edit_cache.dir
+/home/fmw/gitClone/mySelf/slam14_self/ch7/build/CMakeFiles/rebuild_cache.dir
+/home/fmw/gitClone/mySelf/slam14_self/ch7/build/CMakeFiles/pose_estimation_3d2d.dir
+/home/fmw/gitClone/mySelf/slam14_self/ch7/build/CMakeFiles/triangulation.dir
+/home/fmw/gitClone/mySelf/slam14_self/ch7/build/CMakeFiles/pose_estimation_2d2d.dir
+/home/fmw/gitClone/mySelf/slam14_self/ch7/build/CMakeFiles/orb_cv.dir

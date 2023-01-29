@@ -28,6 +28,44 @@ int main(int argc, char **argv)
     optimizer.setVerbose(true);       // 打开调试输出
 
     int vertexCnt = 0, edgeCnt = 0; 
+    while (!fin.eof())
+    {
+        std::string name;
+        fin >> name;
+
+        if (name == "VERTEX_SE3:QUAT") 
+        {
+            g2o::VertexSE3 *v = new g2o::VertexSE3();
+            int index = 0;
+            fin >> index;
+            v->setId(index);
+            v->read(fin);
+            optimizer.addVertex(v);
+            vertexCnt++;
+            if (index == 0) {
+                v->setFixed(true);
+            }
+        } else if (name == "EDGE_SE3:QUAT") {
+            g2o::EdgeSE3 *e = new g2o::EdgeSE3();
+            int idx1, idx2;
+            fin >> idx1, idx2;
+            e->setId(edgeCnt++);
+            e->setVertex(0, optimizer.vertices()[idx1]);
+            e->setVertex(1, optimizer.vertices()[idx2]);
+            e->read(fin);
+            optimizer.addEdge(e);
+        }
+        if(!fin.good()) break;
+    }
+
+    std::cout << "read total: " << vertexCnt << "vertices,  " << edgeCnt << "edges." << std::endl;
+
+    std::cout << "optimizing..." << std::endl;
+    optimizer.initializeOptimization();
+    optimizer.optimize(30);
+
+    std::cout << "saving optimizaiton results..." << std::endl;
+    optimizer.save("../data/result.g2o");
     
     return 0;
 }

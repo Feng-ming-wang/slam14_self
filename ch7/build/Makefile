@@ -48,24 +48,13 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fmw/gitClone/mySelf/slam14/ch7
+CMAKE_SOURCE_DIR = /home/fmw/gitClone/mySelf/slam14_self/ch7
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fmw/gitClone/mySelf/slam14/ch7/build
+CMAKE_BINARY_DIR = /home/fmw/gitClone/mySelf/slam14_self/ch7/build
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -78,11 +67,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fmw/gitClone/mySelf/slam14/ch7/build/CMakeFiles /home/fmw/gitClone/mySelf/slam14/ch7/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fmw/gitClone/mySelf/slam14_self/ch7/build/CMakeFiles /home/fmw/gitClone/mySelf/slam14_self/ch7/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fmw/gitClone/mySelf/slam14/ch7/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fmw/gitClone/mySelf/slam14_self/ch7/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -109,6 +109,45 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named pose_estimation_3d2d
+
+# Build rule for target.
+pose_estimation_3d2d: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pose_estimation_3d2d
+.PHONY : pose_estimation_3d2d
+
+# fast build rule for target.
+pose_estimation_3d2d/fast:
+	$(MAKE) -f CMakeFiles/pose_estimation_3d2d.dir/build.make CMakeFiles/pose_estimation_3d2d.dir/build
+.PHONY : pose_estimation_3d2d/fast
+
+#=============================================================================
+# Target rules for targets named triangulation
+
+# Build rule for target.
+triangulation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 triangulation
+.PHONY : triangulation
+
+# fast build rule for target.
+triangulation/fast:
+	$(MAKE) -f CMakeFiles/triangulation.dir/build.make CMakeFiles/triangulation.dir/build
+.PHONY : triangulation/fast
+
+#=============================================================================
+# Target rules for targets named pose_estimation_2d2d
+
+# Build rule for target.
+pose_estimation_2d2d: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pose_estimation_2d2d
+.PHONY : pose_estimation_2d2d
+
+# fast build rule for target.
+pose_estimation_2d2d/fast:
+	$(MAKE) -f CMakeFiles/pose_estimation_2d2d.dir/build.make CMakeFiles/pose_estimation_2d2d.dir/build
+.PHONY : pose_estimation_2d2d/fast
 
 #=============================================================================
 # Target rules for targets named orb_cv
@@ -150,18 +189,111 @@ src/orb_cv.cpp.s:
 	$(MAKE) -f CMakeFiles/orb_cv.dir/build.make CMakeFiles/orb_cv.dir/src/orb_cv.cpp.s
 .PHONY : src/orb_cv.cpp.s
 
+src/pose_estimation_2d2d.o: src/pose_estimation_2d2d.cpp.o
+
+.PHONY : src/pose_estimation_2d2d.o
+
+# target to build an object file
+src/pose_estimation_2d2d.cpp.o:
+	$(MAKE) -f CMakeFiles/pose_estimation_2d2d.dir/build.make CMakeFiles/pose_estimation_2d2d.dir/src/pose_estimation_2d2d.cpp.o
+.PHONY : src/pose_estimation_2d2d.cpp.o
+
+src/pose_estimation_2d2d.i: src/pose_estimation_2d2d.cpp.i
+
+.PHONY : src/pose_estimation_2d2d.i
+
+# target to preprocess a source file
+src/pose_estimation_2d2d.cpp.i:
+	$(MAKE) -f CMakeFiles/pose_estimation_2d2d.dir/build.make CMakeFiles/pose_estimation_2d2d.dir/src/pose_estimation_2d2d.cpp.i
+.PHONY : src/pose_estimation_2d2d.cpp.i
+
+src/pose_estimation_2d2d.s: src/pose_estimation_2d2d.cpp.s
+
+.PHONY : src/pose_estimation_2d2d.s
+
+# target to generate assembly for a file
+src/pose_estimation_2d2d.cpp.s:
+	$(MAKE) -f CMakeFiles/pose_estimation_2d2d.dir/build.make CMakeFiles/pose_estimation_2d2d.dir/src/pose_estimation_2d2d.cpp.s
+.PHONY : src/pose_estimation_2d2d.cpp.s
+
+src/pose_estimation_3d2d.o: src/pose_estimation_3d2d.cpp.o
+
+.PHONY : src/pose_estimation_3d2d.o
+
+# target to build an object file
+src/pose_estimation_3d2d.cpp.o:
+	$(MAKE) -f CMakeFiles/pose_estimation_3d2d.dir/build.make CMakeFiles/pose_estimation_3d2d.dir/src/pose_estimation_3d2d.cpp.o
+.PHONY : src/pose_estimation_3d2d.cpp.o
+
+src/pose_estimation_3d2d.i: src/pose_estimation_3d2d.cpp.i
+
+.PHONY : src/pose_estimation_3d2d.i
+
+# target to preprocess a source file
+src/pose_estimation_3d2d.cpp.i:
+	$(MAKE) -f CMakeFiles/pose_estimation_3d2d.dir/build.make CMakeFiles/pose_estimation_3d2d.dir/src/pose_estimation_3d2d.cpp.i
+.PHONY : src/pose_estimation_3d2d.cpp.i
+
+src/pose_estimation_3d2d.s: src/pose_estimation_3d2d.cpp.s
+
+.PHONY : src/pose_estimation_3d2d.s
+
+# target to generate assembly for a file
+src/pose_estimation_3d2d.cpp.s:
+	$(MAKE) -f CMakeFiles/pose_estimation_3d2d.dir/build.make CMakeFiles/pose_estimation_3d2d.dir/src/pose_estimation_3d2d.cpp.s
+.PHONY : src/pose_estimation_3d2d.cpp.s
+
+src/triangulation.o: src/triangulation.cpp.o
+
+.PHONY : src/triangulation.o
+
+# target to build an object file
+src/triangulation.cpp.o:
+	$(MAKE) -f CMakeFiles/triangulation.dir/build.make CMakeFiles/triangulation.dir/src/triangulation.cpp.o
+.PHONY : src/triangulation.cpp.o
+
+src/triangulation.i: src/triangulation.cpp.i
+
+.PHONY : src/triangulation.i
+
+# target to preprocess a source file
+src/triangulation.cpp.i:
+	$(MAKE) -f CMakeFiles/triangulation.dir/build.make CMakeFiles/triangulation.dir/src/triangulation.cpp.i
+.PHONY : src/triangulation.cpp.i
+
+src/triangulation.s: src/triangulation.cpp.s
+
+.PHONY : src/triangulation.s
+
+# target to generate assembly for a file
+src/triangulation.cpp.s:
+	$(MAKE) -f CMakeFiles/triangulation.dir/build.make CMakeFiles/triangulation.dir/src/triangulation.cpp.s
+.PHONY : src/triangulation.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... pose_estimation_3d2d"
+	@echo "... triangulation"
+	@echo "... pose_estimation_2d2d"
 	@echo "... orb_cv"
 	@echo "... src/orb_cv.o"
 	@echo "... src/orb_cv.i"
 	@echo "... src/orb_cv.s"
+	@echo "... src/pose_estimation_2d2d.o"
+	@echo "... src/pose_estimation_2d2d.i"
+	@echo "... src/pose_estimation_2d2d.s"
+	@echo "... src/pose_estimation_3d2d.o"
+	@echo "... src/pose_estimation_3d2d.i"
+	@echo "... src/pose_estimation_3d2d.s"
+	@echo "... src/triangulation.o"
+	@echo "... src/triangulation.i"
+	@echo "... src/triangulation.s"
 .PHONY : help
 
 

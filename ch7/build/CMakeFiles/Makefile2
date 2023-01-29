@@ -44,15 +44,18 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fmw/gitClone/mySelf/slam14/ch7
+CMAKE_SOURCE_DIR = /home/fmw/gitClone/mySelf/slam14_self/ch7
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fmw/gitClone/mySelf/slam14/ch7/build
+CMAKE_BINARY_DIR = /home/fmw/gitClone/mySelf/slam14_self/ch7/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/pose_estimation_3d2d.dir/all
+all: CMakeFiles/triangulation.dir/all
+all: CMakeFiles/pose_estimation_2d2d.dir/all
 all: CMakeFiles/orb_cv.dir/all
 
 .PHONY : all
@@ -63,9 +66,93 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/pose_estimation_3d2d.dir/clean
+clean: CMakeFiles/triangulation.dir/clean
+clean: CMakeFiles/pose_estimation_2d2d.dir/clean
 clean: CMakeFiles/orb_cv.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/pose_estimation_3d2d.dir
+
+# All Build rule for target.
+CMakeFiles/pose_estimation_3d2d.dir/all:
+	$(MAKE) -f CMakeFiles/pose_estimation_3d2d.dir/build.make CMakeFiles/pose_estimation_3d2d.dir/depend
+	$(MAKE) -f CMakeFiles/pose_estimation_3d2d.dir/build.make CMakeFiles/pose_estimation_3d2d.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fmw/gitClone/mySelf/slam14_self/ch7/build/CMakeFiles --progress-num=5,6 "Built target pose_estimation_3d2d"
+.PHONY : CMakeFiles/pose_estimation_3d2d.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/pose_estimation_3d2d.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fmw/gitClone/mySelf/slam14_self/ch7/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pose_estimation_3d2d.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fmw/gitClone/mySelf/slam14_self/ch7/build/CMakeFiles 0
+.PHONY : CMakeFiles/pose_estimation_3d2d.dir/rule
+
+# Convenience name for target.
+pose_estimation_3d2d: CMakeFiles/pose_estimation_3d2d.dir/rule
+
+.PHONY : pose_estimation_3d2d
+
+# clean rule for target.
+CMakeFiles/pose_estimation_3d2d.dir/clean:
+	$(MAKE) -f CMakeFiles/pose_estimation_3d2d.dir/build.make CMakeFiles/pose_estimation_3d2d.dir/clean
+.PHONY : CMakeFiles/pose_estimation_3d2d.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/triangulation.dir
+
+# All Build rule for target.
+CMakeFiles/triangulation.dir/all:
+	$(MAKE) -f CMakeFiles/triangulation.dir/build.make CMakeFiles/triangulation.dir/depend
+	$(MAKE) -f CMakeFiles/triangulation.dir/build.make CMakeFiles/triangulation.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fmw/gitClone/mySelf/slam14_self/ch7/build/CMakeFiles --progress-num=7,8 "Built target triangulation"
+.PHONY : CMakeFiles/triangulation.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/triangulation.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fmw/gitClone/mySelf/slam14_self/ch7/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/triangulation.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fmw/gitClone/mySelf/slam14_self/ch7/build/CMakeFiles 0
+.PHONY : CMakeFiles/triangulation.dir/rule
+
+# Convenience name for target.
+triangulation: CMakeFiles/triangulation.dir/rule
+
+.PHONY : triangulation
+
+# clean rule for target.
+CMakeFiles/triangulation.dir/clean:
+	$(MAKE) -f CMakeFiles/triangulation.dir/build.make CMakeFiles/triangulation.dir/clean
+.PHONY : CMakeFiles/triangulation.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/pose_estimation_2d2d.dir
+
+# All Build rule for target.
+CMakeFiles/pose_estimation_2d2d.dir/all:
+	$(MAKE) -f CMakeFiles/pose_estimation_2d2d.dir/build.make CMakeFiles/pose_estimation_2d2d.dir/depend
+	$(MAKE) -f CMakeFiles/pose_estimation_2d2d.dir/build.make CMakeFiles/pose_estimation_2d2d.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fmw/gitClone/mySelf/slam14_self/ch7/build/CMakeFiles --progress-num=3,4 "Built target pose_estimation_2d2d"
+.PHONY : CMakeFiles/pose_estimation_2d2d.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/pose_estimation_2d2d.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fmw/gitClone/mySelf/slam14_self/ch7/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pose_estimation_2d2d.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fmw/gitClone/mySelf/slam14_self/ch7/build/CMakeFiles 0
+.PHONY : CMakeFiles/pose_estimation_2d2d.dir/rule
+
+# Convenience name for target.
+pose_estimation_2d2d: CMakeFiles/pose_estimation_2d2d.dir/rule
+
+.PHONY : pose_estimation_2d2d
+
+# clean rule for target.
+CMakeFiles/pose_estimation_2d2d.dir/clean:
+	$(MAKE) -f CMakeFiles/pose_estimation_2d2d.dir/build.make CMakeFiles/pose_estimation_2d2d.dir/clean
+.PHONY : CMakeFiles/pose_estimation_2d2d.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/orb_cv.dir
@@ -74,14 +161,14 @@ clean: CMakeFiles/orb_cv.dir/clean
 CMakeFiles/orb_cv.dir/all:
 	$(MAKE) -f CMakeFiles/orb_cv.dir/build.make CMakeFiles/orb_cv.dir/depend
 	$(MAKE) -f CMakeFiles/orb_cv.dir/build.make CMakeFiles/orb_cv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fmw/gitClone/mySelf/slam14/ch7/build/CMakeFiles --progress-num=1,2 "Built target orb_cv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fmw/gitClone/mySelf/slam14_self/ch7/build/CMakeFiles --progress-num=1,2 "Built target orb_cv"
 .PHONY : CMakeFiles/orb_cv.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/orb_cv.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fmw/gitClone/mySelf/slam14/ch7/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fmw/gitClone/mySelf/slam14_self/ch7/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/orb_cv.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fmw/gitClone/mySelf/slam14/ch7/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fmw/gitClone/mySelf/slam14_self/ch7/build/CMakeFiles 0
 .PHONY : CMakeFiles/orb_cv.dir/rule
 
 # Convenience name for target.

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fmw/gitClone/mySelf/slam14/ch8
+CMAKE_SOURCE_DIR = /home/fmw/gitClone/mySelf/slam14_self/ch8
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fmw/gitClone/mySelf/slam14/ch8/build
+CMAKE_BINARY_DIR = /home/fmw/gitClone/mySelf/slam14_self/ch8/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fmw/gitClone/mySelf/slam14/ch8/build/CMakeFiles /home/fmw/gitClone/mySelf/slam14/ch8/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fmw/gitClone/mySelf/slam14_self/ch8/build/CMakeFiles /home/fmw/gitClone/mySelf/slam14_self/ch8/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fmw/gitClone/mySelf/slam14/ch8/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fmw/gitClone/mySelf/slam14_self/ch8/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named direct_method
+
+# Build rule for target.
+direct_method: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 direct_method
+.PHONY : direct_method
+
+# fast build rule for target.
+direct_method/fast:
+	$(MAKE) -f CMakeFiles/direct_method.dir/build.make CMakeFiles/direct_method.dir/build
+.PHONY : direct_method/fast
+
+#=============================================================================
 # Target rules for targets named optical_flow
 
 # Build rule for target.
@@ -122,6 +135,33 @@ optical_flow: cmake_check_build_system
 optical_flow/fast:
 	$(MAKE) -f CMakeFiles/optical_flow.dir/build.make CMakeFiles/optical_flow.dir/build
 .PHONY : optical_flow/fast
+
+src/direct_method.o: src/direct_method.cpp.o
+
+.PHONY : src/direct_method.o
+
+# target to build an object file
+src/direct_method.cpp.o:
+	$(MAKE) -f CMakeFiles/direct_method.dir/build.make CMakeFiles/direct_method.dir/src/direct_method.cpp.o
+.PHONY : src/direct_method.cpp.o
+
+src/direct_method.i: src/direct_method.cpp.i
+
+.PHONY : src/direct_method.i
+
+# target to preprocess a source file
+src/direct_method.cpp.i:
+	$(MAKE) -f CMakeFiles/direct_method.dir/build.make CMakeFiles/direct_method.dir/src/direct_method.cpp.i
+.PHONY : src/direct_method.cpp.i
+
+src/direct_method.s: src/direct_method.cpp.s
+
+.PHONY : src/direct_method.s
+
+# target to generate assembly for a file
+src/direct_method.cpp.s:
+	$(MAKE) -f CMakeFiles/direct_method.dir/build.make CMakeFiles/direct_method.dir/src/direct_method.cpp.s
+.PHONY : src/direct_method.cpp.s
 
 src/optical_flow.o: src/optical_flow.cpp.o
 
@@ -158,7 +198,11 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... direct_method"
 	@echo "... optical_flow"
+	@echo "... src/direct_method.o"
+	@echo "... src/direct_method.i"
+	@echo "... src/direct_method.s"
 	@echo "... src/optical_flow.o"
 	@echo "... src/optical_flow.i"
 	@echo "... src/optical_flow.s"

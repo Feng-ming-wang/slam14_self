@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++14 -O3 -DNDEBUG   CMakeFiles/pose_graph_g2o_lie.dir/src/pose_graph_g2o_lie_algebra.cpp.o  -o ../bin/pose_graph_g2o_lie  -Wl,-rpath,/home/fmw/gitClone/Sophus/build -lg2o_core -lg2o_stuff /home/fmw/gitClone/Sophus/build/libSophus.so 
